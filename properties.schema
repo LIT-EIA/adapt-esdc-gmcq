@@ -33,7 +33,8 @@
     "_items": {
       "type": "array",
       "required": true,
-      "title": "Items",
+      "title": "Answers",
+      "help": "The possible answers available to the learner",
       "items": {
         "type": "object",
         "required": true,
@@ -102,7 +103,7 @@
             "required": false,
             "default": "",
             "title": "Answer-specific feedback",
-            "inputType": "Text",
+            "inputType": "TextArea",
             "validators": [],
             "help": "When 'Selectable Items' is set to 1, this can be used to give the user feedback specific to the answer they selected",
             "translatable": true
@@ -160,15 +161,6 @@
       "inputType": "Checkbox",
       "validators": []
     },
-    "_questionWeight": {
-      "type": "number",
-      "required": false,
-      "default": 1,
-      "title": "Question Weight",
-      "inputType": "Number",
-      "validators": ["number"],
-      "help": "How much this question is worth"
-    },
     "_recordInteraction": {
       "type": "boolean",
       "required": false,
@@ -177,6 +169,15 @@
       "inputType": "Checkbox",
       "validators": [],
       "help": "If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only."
+    },
+    "_questionWeight": {
+      "type": "number",
+      "required": false,
+      "default": 1,
+      "title": "Question Weight",
+      "inputType": "Number",
+      "validators": ["number"],
+      "help": "How much this question is worth"
     },
     "_columns": {
       "type": "number",
